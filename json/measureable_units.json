@@ -105,6 +105,17 @@
 			},
 			"required": ["unit", "value"]
 		},
+		"ConcentrationType": {
+			"properties": {
+				"unit": {
+					"$ref": "#/definitions/ConcentrationUnitType"
+				},
+				"value": {
+					"type": "number"
+				}
+			},
+			"required": ["unit", "value"]
+		},
 		"SpecificVolumeType": {
 			"properties": {
 				"unit": {
@@ -240,15 +251,6 @@
 			"type": "string",
 			"enum": ["sg", "plato"]
 		},
-<<<<<<< HEAD
-		"SpecificHeatUnitType": {
-			"type": "string",
-			"enum": ["J/(kg K)", "BTU/(lb F)"]
-		},
-		"SpecificVolumeUnitType": {
-			"type": "string",
-			"enum": ["m^3/kg", "ft^3/lb"]
-=======
 		"ConcentrationUnitType": {
 			"type": "string",
 			"enum": ["ppm", "ppb","mg/l"]
@@ -260,7 +262,6 @@
 		"SpecificVolumeUnitType": {
 			"type": "string",
 			"enum": ["qt/lb", "gal/lb", "gal/oz","l/g", "l/kg", "ozfl/oz", "m^3/kg", "ft^3/lb"]
->>>>>>> upstream/master
 		},
 		"UnitUnitType": {
 			"type": "string",
