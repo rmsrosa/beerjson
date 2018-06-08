@@ -112,10 +112,20 @@
           "type": "string"
         },
         "original_gravity": {
-          "$ref": "measureable_units.json#/definitions/DensityType"
+          "oneOf" : [
+            { "$ref": "measureable_units.json#/definitions/SpecificGravityType"
+            },
+            { "$ref": "measureable_units.json#/definitions/ExtractType"
+            }
+          ]
         },
         "final_gravity": {
-          "$ref": "measureable_units.json#/definitions/DensityType"
+          "oneOf" : [
+            { "$ref": "measureable_units.json#/definitions/SpecificGravityType"
+            },
+            { "$ref": "measureable_units.json#/definitions/ExtractType"
+            }
+          ]
         },
         "alcohol_by_volume": {
           "$ref": "measureable_units.json#/definitions/PercentType"

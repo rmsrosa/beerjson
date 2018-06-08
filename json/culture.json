@@ -112,14 +112,15 @@
             "add_to_fermentation_step": {
               "type": "integer"
             },
-            "addition_time": {
-              "$ref": "measureable_units.json#/definitions/TimeType"
-            },
-            "addition_sg": {
-              "$ref": "measureable_units.json#/definitions/DensityRangeType"
-            },
-            "cell_count_billions": {
-              "type": "integer"
+            "addition_moment": {
+              "oneOf" : [
+                { "$ref": "measureable_units.json#/definitions/TimeType"
+                },
+                { "$ref": "measureable_units.json#/definitions/SpecificGravityRangeType"
+                },
+                { "$ref": "measureable_units.json#/definitions/ExtractRangeType"
+                }
+              ]
             },
             "amount": {
               "oneOf": [

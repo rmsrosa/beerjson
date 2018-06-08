@@ -83,10 +83,43 @@
 			},
 			"required": ["unit", "value"]
 		},
+		"SpecificGravityType": {
+			"properties": {
+				"unit": {
+					"$ref": "#/definitions/SpecificGravityUnitType"
+				},
+				"value": {
+					"type": "number"
+				}
+			},
+			"required": ["unit", "value"]
+		},
+		"ExtractType": {
+			"properties": {
+				"unit": {
+					"$ref": "#/definitions/ExtraUnitType"
+				},
+				"value": {
+					"type": "number"
+				}
+			},
+			"required": ["unit", "value"]
+		},
 		"DensityType": {
 			"properties": {
 				"unit": {
 					"$ref": "#/definitions/DensityUnitType"
+				},
+				"value": {
+					"type": "number"
+				}
+			},
+			"required": ["unit", "value"]
+		},
+		"PointsPerGravityType": {
+			"properties": {
+				"unit": {
+					"$ref": "#/definitions/PointsPerGravityUnitType"
 				},
 				"value": {
 					"type": "number"
@@ -177,6 +210,32 @@
 			},
 			"required": ["minimum", "maximum"]
 		},
+		"SpecificGravityRangeType": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"minimum": {
+					"$ref": "#/definitions/SpecificGravityType"
+				},
+				"maximum": {
+					"$ref": "#/definitions/SpecificGravityType"
+				}
+			},
+			"required": ["minimum", "maximum"]
+		},
+		"ExtractRangeType": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"minimum": {
+					"$ref": "#/definitions/ExtractType"
+				},
+				"maximum": {
+					"$ref": "#/definitions/ExtractType"
+				}
+			},
+			"required": ["minimum", "maximum"]
+		},
 		"DensityRangeType": {
 			"type": "object",
 			"additionalProperties": false,
@@ -247,13 +306,25 @@
 			"type": "string",
 			"enum": ["EBC", "L", "SRM"]
 		},
+		"SpecificGravityUnitType": {
+			"type": "string",
+			"enum": ["sg"]
+		},
+		"ExtractUnitType": {
+			"type": "string",
+			"enum": ["P"]
+		},
 		"DensityUnitType": {
 			"type": "string",
-			"enum": ["sg", "plato"]
+			"enum": ["mg/l", "kg/m^3", "lb/gal"]
+		},
+		"PointsPerGravityUnitType": {
+			"type": "string",
+			"enum": ["ppg"]
 		},
 		"ConcentrationUnitType": {
 			"type": "string",
-			"enum": ["ppm", "ppb","mg/l"]
+			"enum": ["ppm", "ppb"]
 		},
 		"SpecificHeatUnitType": {
 			"type": "string",

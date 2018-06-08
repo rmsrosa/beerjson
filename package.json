@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/beerjson/beerjson#readme",
   "dependencies": {
-    "npm": "^5.8.0"
+    "npm": "^6.1.0"
   }
 }

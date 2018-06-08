@@ -89,7 +89,14 @@
               "type": "number"
             },
             "potential": {
-              "$ref": "measureable_units.json#/definitions/DensityType"
+              "oneOf" : [
+                { "$ref": "measureable_units.json#/definitions/PercentType"
+                },
+                { "$ref": "measureable_units.json#/definitions/PointsPerGravityType"  
+                },
+                { "$ref": "measureable_units.json#/definitions/SpecificGravityType"
+                }
+              ]
             },
             "inventory": {
               "$ref": "measureable_units.json#/definitions/MassType"

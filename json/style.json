@@ -43,10 +43,20 @@
         {
           "properties": {
             "original_gravity": {
-              "$ref": "measureable_units.json#/definitions/DensityRangeType"
+              "oneOf" : [
+                { "$ref": "measureable_units.json#/definitions/SpecificGravityRangeType"
+                },
+                {"$ref": "measureable_units.json#/definitions/ExtractRangeType"
+                }
+              ]
             },
             "final_gravity": {
-              "$ref": "measureable_units.json#/definitions/DensityRangeType"
+              "oneOf" : [
+                { "$ref": "measureable_units.json#/definitions/SpecificGravityRangeType"
+                },
+                {"$ref": "measureable_units.json#/definitions/ExtractRangeType"
+                }
+              ]
             },
             "international_bitterness_units": {
               "$ref":

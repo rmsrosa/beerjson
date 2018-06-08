@@ -1,6 +1,6 @@
 The schema defines the following types:
 
-## FermentableBase 
+## FermentableBase
 
 FermentableBase provides unique properties to identify individual records of fermentable ingredients
 
@@ -17,7 +17,7 @@ FermentableBase provides unique properties to identify individual records of fer
 | **supplier** | string|  |  |
 | **group** |  'base'  , 'caramel'  , 'flaked'  , 'roasted'  , 'speciality'  , 'wheat' |  |  |
 
-## FermentableType 
+## FermentableType
 
 FermentableType collects the attributes of a fermentable ingredient to store as record information
 
@@ -38,10 +38,10 @@ Parent: [FermentableBase](#fermentablebase)
 | **max_in_batch** | [PercentType](measureable_units.json.md#percenttype)|  |  |
 | **recommend_mash** | boolean|  |  |
 | **ibu_gal_per_lb** | number|  |  |
-| **potential** | [DensityType](measureable_units.json.md#densitytype)|  |  |
+| **potential** | [SpecificGravityType](measureable_units.json.md#specificgravitytype)|  |  |
 | **inventory** | [MassType](measureable_units.json.md#masstype)|  |  |
 
-## FermentableAdditionType 
+## FermentableAdditionType
 
 FermentableAdditionType collects the attributes of each fermentable ingredient for use in a recipe fermentable bill
 
@@ -56,4 +56,3 @@ Parent: [FermentableBase](#fermentablebase)
 | **amount** | [MassType](measureable_units.json.md#masstype)|  |  |
 | **yield** | number|  |  |
 | **add_after_boil** | boolean|  |  |
-
